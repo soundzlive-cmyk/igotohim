@@ -1,6 +1,8 @@
 // Set the official YouTube CHANNEL ID (starts with UC) to enable automatic latest-sermon updates.
 // The uploads playlist will be derived automatically and YouTube will maintain its ordering.
 window.IGOTOHIM_CONFIG = {
+  // Featured sermon shown on the Home page (YouTube video ID from the watch?v= link).
+  featuredVideoId: '2kD5aHTYvXE',
   youtubeChannelId: '',
   // Optional: add a Google YouTube Data API v3 key for titled recent-video cards.
   youtubeApiKey: '',
