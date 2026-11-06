@@ -14,7 +14,7 @@ Optional: enter a valid YouTube Data API v3 key in `youtubeApiKey` to display th
 ## Other launch configuration
 - Add a verified online giving URL to `givingUrl`.
 - Add the current Bible Study joining URL to `bibleStudyUrl`.
-- Replace illustrative stock photography with authorized church photos and the official Disciple Maker logo.
+- Replace illustrative stock photography with authorized church photos.
 - Verify Wednesday Bible Study at 7:30 PM; the currently published site says 7 PM.
 - Confirm ministry/leadership and special-event information before publishing.
 - Contact and prayer forms currently use mailto and require the visitor to send from their own email app. For fully online submissions, integrate a secure form backend with anti-spam and privacy safeguards.
