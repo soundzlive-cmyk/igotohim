@@ -6,7 +6,7 @@ window.IGOTOHIM_CONFIG = {
     facebook: 'https://www.facebook.com/people/Igotohim-Hosanna-Intl-Ministries/61551890927696/',
     instagram: '',
     youtube: 'https://www.youtube.com/@igotohim',
-    zoom: 'https://us02web.zoom.us/s/8018479115?pwd=eDBSMUF2NDRJQVBGNUxqTmJIU2Jodz09'
+    zoom: 'https://us02web.zoom.us/j/8018479115'
   },
   // Featured sermon shown on the Home page (YouTube video ID from the watch?v= link).
   featuredVideoId: 'ES_DaoqgOH0',
@@ -18,5 +18,5 @@ window.IGOTOHIM_CONFIG = {
   // Optional: replace with the church's verified donation page.
   givingUrl: '',
   // Optional: replace with a verified Zoom / livestream link.
-  bibleStudyUrl: 'https://us02web.zoom.us/s/8018479115?pwd=eDBSMUF2NDRJQVBGNUxqTmJIU2Jodz09'
+  bibleStudyUrl: 'https://us02web.zoom.us/j/8018479115'
 };
