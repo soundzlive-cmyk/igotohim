@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',()=>{header();footer();sermonPlayer
     var s=(window.IGOTOHIM_CONFIG||{}).social||{};var keys=Object.keys(ICON).filter(function(k){return /^https:\/\//.test((s[k]||'').trim())});
     if(!keys.length)return;
     var html='<div class="social">'+keys.map(function(k){return '<a href="'+s[k].trim().replace(/"/g,'%22')+'" target="_blank" rel="noopener" aria-label="IGotoHim on '+NAME[k]+'" title="'+NAME[k]+'"><svg viewBox="0 0 24 24" aria-hidden="true">'+ICON[k]+'</svg></a>'}).join('')+'</div>';
-    document.querySelectorAll('.footer-grid>div:first-child').forEach(function(el){el.insertAdjacentHTML('beforeend',html)});
+    document.querySelectorAll('.footer-grid>div:first-child').forEach(function(el){el.insertAdjacentHTML('beforeend',html)});var tb=document.querySelector('.topbar');if(tb)tb.insertAdjacentHTML('beforeend',html.replace('class="social"','class="social social-top"'));
     var c=document.querySelector('#visit .btn[href*="google.com/maps"]');if(c)c.insertAdjacentHTML('afterend','<div style="margin-top:22px"><div class="eyebrow">FOLLOW US</div>'+html+'</div>');
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
