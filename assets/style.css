@@ -175,3 +175,5 @@
 }
 @media(prefers-reduced-motion:reduce){.polaroid,.slideshow.pf{transition:none}}
 .slideshow.pf .slides{overflow:visible}.slideshow.pf .slide{overflow:visible}.slideshow.pf .slide img{position:absolute;inset:0}
+/* Polaroids in full color */
+.polaroid img,.split .polaroid img,.pastor-photo,.sotd-photo,.visit-photo,.slideshow.pf .slide img,.card img{filter:none!important}
