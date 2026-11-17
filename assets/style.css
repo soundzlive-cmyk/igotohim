@@ -23,4 +23,65 @@
 .hero-fx .sparks i{position:absolute;bottom:-10px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:#ffd2a1;box-shadow:0 0 10px 2px #ff9a4d;opacity:0;animation:rise var(--d) linear var(--delay) infinite}
 @keyframes rise{0%{transform:translate(0,0);opacity:0}10%{opacity:.85}70%{opacity:.6}100%{transform:translate(30px,-620px);opacity:0}}
 @media(prefers-reduced-motion:reduce){.hero-fx *{animation:none!important}.hero-fx .sparks{display:none}}
-.social{display:flex;gap:10px;margin-top:16px}.social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#ffffff14;color:#fff;transition:.2s}.social a:hover{background:var(--orange)}.social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}#visit .social a{background:#fff2e7;color:var(--orange-text)}#visit .social a:hover{background:var(--orange);color:#fff}.topbar{position:relative}.social-top{position:absolute;right:24px;top:50%;transform:translateY(-50%);margin:0;gap:4px}.topbar .social a{width:26px;height:26px;background:transparent;color:#d9cdc5}.topbar .social a:hover{background:transparent;color:#ff9a55}.topbar .social svg{width:16px;height:16px}@media(max-width:900px){.social-top{position:static;transform:none;justify-content:center;margin-top:4px}}
+.social{display:flex;gap:10px;margin-top:16px}.social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#ffffff14;color:#fff;transition:.2s}.social a:hover{background:var(--orange)}.social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}#visit .social a{background:#fff2e7;color:var(--orange-text)}#visit .social a:hover{background:var(--orange);color:#fff}.topbar{position:relative}.social-top{position:absolute;right:24px;top:50%;transform:translateY(-50%);margin:0;gap:4px}.topbar .social a{width:26px;height:26px;background:transparent;color:#d9cdc5}.topbar .social a:hover{background:transparent;color:#ff9a55}.topbar .social svg{width:16px;height:16px}@media(max-width:900px){.social-top{position:static;transform:none;justify-content:center;margin-top:4px}}/* ===== Mobile refinements ===== */
+.menu{width:44px;height:44px;display:none;align-items:center;justify-content:center}
+@media(max-width:900px){
+  .menu{display:inline-flex}
+  .navlinks{max-height:calc(100vh - 78px);overflow-y:auto}
+  .navlinks .navitem{min-height:44px;font-size:15px}
+  .dropmenu a{min-height:40px;display:flex;align-items:center;font-size:14px}
+  .navlinks .btn{width:100%;min-height:48px}
+}
+@media(max-width:620px){
+  body{-webkit-text-size-adjust:100%}
+  .topbar{font-size:11px;padding:8px 12px;line-height:1.5}
+  .topbar .social a{width:36px;height:36px}
+  .topbar .social svg{width:18px;height:18px}
+  .section{padding:52px 0}
+  .page-hero{padding:56px 0}
+  .section h2,.page-hero h1{font-size:32px}
+  .hero.banner .hero-grid{padding-bottom:44px}
+  .hero.banner h1{font-size:40px}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn,.split .btn,.sotd-meaning+.btn{width:100%;min-height:48px}
+  .btn{min-height:48px;font-size:14px}
+  .textlink{display:inline-flex;align-items:center;min-height:44px;font-size:14px}
+  /* What to Expect: compact 2-column tiles */
+  .expect-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .expect-item{padding:18px 16px}
+  .expect-item .sym{width:42px;height:42px;margin-bottom:10px}
+  .expect-item .sym svg{width:22px;height:22px}
+  .expect-item h3{font-size:15px}
+  .expect-item p{font-size:13px;line-height:1.55}
+  /* cards */
+  .card img{height:190px}
+  .card-content{padding:20px}
+  .cards{gap:16px}
+  /* events: stack the link under the text */
+  .event{flex-wrap:wrap;gap:14px;padding:16px}
+  .event>.textlink{margin-left:0;width:100%;border-top:1px solid #f0e8e2;padding-top:6px}
+  .event .date{min-width:66px;padding:10px 8px;font-size:14px}
+  .event h3{font-size:17px}
+  /* scripture */
+  .sotd-text{font-size:23px;margin:18px 0 12px}
+  .sotd-photo{max-height:300px}
+  /* forms: 16px prevents iPhone zoom on focus */
+  .form input,.form textarea,.s-filters input,.s-filters select,.search{font-size:16px}
+  .form button{min-height:50px}
+  /* sermons */
+  .s-feature{padding:14px;gap:14px;margin-bottom:30px}
+  .s-feature .btn{width:100%}
+  .s-chips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;margin:0 -18px;padding-left:18px;padding-right:18px}
+  .chip{white-space:nowrap;min-height:40px}
+  .s-modal{padding:0;place-items:stretch}
+  .s-modal-box{border-radius:0;align-self:center}
+  /* footer: bigger tap targets */
+  .footer{padding-top:48px}
+  .footer-grid{gap:30px}
+  .footer-grid a{display:inline-block;padding:6px 0}
+  .footer .social a{width:44px;height:44px}
+  .facts li{font-size:15px}
+  .portrait,.pastor-photo.tall-portrait{max-height:380px}
+}
+@media(max-width:360px){.expect-grid{grid-template-columns:1fr}.hero.banner h1{font-size:34px}}
+.topbar .tb-loc{color:inherit}@media(max-width:620px){.topbar .tb-loc{display:none}.footer-grid .social a{display:grid;padding:0}#visit p a{display:inline-block;padding:10px 0}}
