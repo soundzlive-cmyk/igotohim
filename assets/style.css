@@ -116,3 +116,4 @@
 @media(max-width:900px){.abc{grid-template-columns:1fr}.prayer-box{grid-template-columns:1fr;padding:26px}}
 @media(max-width:620px){.slideshow{aspect-ratio:4/4.2}.scripture-q{font-size:17px}.prayer{font-size:17px}.abc-item{padding:22px}.ss-nav{width:40px;height:40px}}
 @media(prefers-reduced-motion:reduce){.slide{transition:none}}
+.sotd-photo[src*="pastor-prayer"],#prayer img[src*="pastor-prayer"]{object-position:center 25%}
