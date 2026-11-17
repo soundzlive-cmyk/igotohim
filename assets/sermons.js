@@ -12,5 +12,5 @@ window.IGOTOHIM_SERMONS = [
   { video: 'https://www.youtube.com/watch?v=wQyvZ62OgKw&t=44s', title: 'Stay Committed and Consistent', preacher: 'Pastor Drew Ambroise', category: 'Sunday Service', date: '', scripture: '' },
   { video: 'https://www.youtube.com/watch?v=uzrIhydMy5M&t=57s', title: 'Sermon (add title)', preacher: 'Pastor Drew Ambroise', category: 'Sunday Service', date: '', scripture: '' },
   { video: 'https://www.youtube.com/watch?v=ES_DaoqgOH0', title: 'Sunday Message (add title)', preacher: 'Preacher (add name)', category: 'Sunday Service', date: '', scripture: '' },
-  { video: 'https://www.youtube.com/watch?v=2kD5aHTYvXE', title: 'Sunday Message (add title)', preacher: 'Preacher (add name)', category: 'Sunday Service', date: '', scripture: '' }
+  { video: 'https://www.youtube.com/watch?v=2kD5aHTYvXE', title: 'Are We Being Spiritually Gaslit?', preacher: 'Pastor Drew Ambroise', category: 'Sunday Service', date: '', scripture: '' }
 ];
