@@ -4,7 +4,7 @@ window.IGOTOHIM_CONFIG = {
   // Social links: paste full URLs. Icons appear in the footer and Contact page only when filled in.
   social: {
     facebook: 'https://www.facebook.com/people/Igotohim-Hosanna-Intl-Ministries/61551890927696/',
-    instagram: '',
+    instagram: 'https://www.instagram.com/hosannaintministries/',
     youtube: 'https://www.youtube.com/@igotohim',
     zoom: 'https://us02web.zoom.us/j/8018479115'
   },
