@@ -1,6 +1,8 @@
 // Set the official YouTube CHANNEL ID (starts with UC) to enable automatic latest-sermon updates.
 // The uploads playlist will be derived automatically and YouTube will maintain its ordering.
 window.IGOTOHIM_CONFIG = {
+  // All website forms (contact, prayer, mailing list) are delivered to this address via FormSubmit.co
+  formEmail: 'soundzlive@yahoo.com',
   // Social links: paste full URLs. Icons appear in the footer and Contact page only when filled in.
   social: {
     facebook: 'https://www.facebook.com/people/Igotohim-Hosanna-Intl-Ministries/61551890927696/',
