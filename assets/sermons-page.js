@@ -2,15 +2,16 @@
   function vid(v){v=(v||'').trim();var m=v.match(/(?:v=|youtu\.be\/|embed\/|shorts\/|live\/)([\w-]{11})/);if(m)return m[1];return /^[\w-]{11}$/.test(v)?v:null}
   function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e}
   function fmt(d){if(!d)return '';var p=d.split('-');var dt=new Date(+p[0],(+p[1]||1)-1,+p[2]||1);return isNaN(dt)?d:dt.toLocaleDateString(undefined,{month:'long',day:'numeric',year:'numeric'})}
-  var all=(window.IGOTOHIM_SERMONS||[]).map(function(s){return Object.assign({},s,{id:vid(s.video)})}).filter(function(s){return s.id});
+  function start(v){var m=(v||'').match(/[?&#](?:t|start)=(?:(\d+)h)?(?:(\d+)m)?(\d+)s?/);return m?((+m[1]||0)*3600+(+m[2]||0)*60+(+m[3]||0)):0}
+  var all=(window.IGOTOHIM_SERMONS||[]).map(function(s){return Object.assign({},s,{id:vid(s.video),start:start(s.video)})}).filter(function(s){return s.id});
   all.sort(function(a,b){return (b.date||'').localeCompare(a.date||'')});
   var state={cat:'All',preacher:'',q:''};
   function thumb(s,cls){var w=el('div',cls||'s-thumb');var img=el('img');img.loading='lazy';img.alt='';img.src='https://i.ytimg.com/vi/'+s.id+'/hqdefault.jpg';img.onerror=function(){img.remove()};w.append(img,el('span','s-play','▶'));return w}
   function open(s){
-    var m=document.querySelector('#s-modal');m.querySelector('.s-modal-video').innerHTML='<iframe title="'+s.title.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+s.id+'?autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    var m=document.querySelector('#s-modal');m.querySelector('.s-modal-video').innerHTML='<iframe title="'+s.title.replace(/"/g,'&quot;')+'" src="https://www.youtube-nocookie.com/embed/'+s.id+'?autoplay=1'+(s.start?'&start='+s.start:'')+'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
     m.querySelector('.s-modal-title').textContent=s.title;
     m.querySelector('.s-modal-meta').textContent=[s.preacher,fmt(s.date),s.scripture].filter(Boolean).join(' · ');
-    m.querySelector('.s-modal-yt').href='https://www.youtube.com/watch?v='+s.id;
+    m.querySelector('.s-modal-yt').href='https://www.youtube.com/watch?v='+s.id+(s.start?'&t='+s.start+'s':'');
     m.hidden=false;document.body.style.overflow='hidden';m.querySelector('.s-close').focus();
   }
   function close(){var m=document.querySelector('#s-modal');m.hidden=true;m.querySelector('.s-modal-video').innerHTML='';document.body.style.overflow=''}
