@@ -1,4 +1,4 @@
-# IGotoHim Church — Responsive Website Prototype
+# IGotoHim — Responsive Website Prototype
 
 ## Pages
 Home, About Us, Leadership, Ministries, Sermons, Events, Giving, Contact.
