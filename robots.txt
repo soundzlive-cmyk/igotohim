@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://soundzlive-cmyk.github.io/igotohim/sitemap.xml
+Sitemap: https://www.igotohim.com/sitemap.xml
