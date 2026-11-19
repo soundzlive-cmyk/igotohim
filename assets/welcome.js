@@ -6,10 +6,19 @@
     var m=document.getElementById('welcome-modal');if(!m)return;
     var force=/[?&#]welcome\b/.test(location.search+location.hash);
     if(seen()&&!force)return;
+    var DAYS=['sun','mon','tue','wed','thu','fri','sat'];
+    var dm=(location.search+location.hash).match(/day=(sun|mon|tue|wed|thu|fri|sat)/);var today=dm?dm[1]:DAYS[new Date().getDay()];
+    var all=[].slice.call(m.querySelectorAll('.wm-slide'));
+    var pick=all.filter(function(s){return (' '+s.dataset.days+' ').indexOf(' '+today+' ')>-1});
+    if(!pick.length)pick=all.filter(function(s){return /\ball\b|mon|sat/.test(s.dataset.days)});
+    all.forEach(function(s){if(pick.indexOf(s)<0)s.remove()});
+    var ratio=0;pick.forEach(function(s,k){s.src=s.dataset.src;if(k===0)s.classList.add('on');ratio=Math.max(ratio,(+s.getAttribute('height'))/(+s.getAttribute('width')))});
+    var box=m.querySelector('.wm-slides');if(ratio)box.style.aspectRatio=(1/ratio).toFixed(4);
+    var dwrap=m.querySelector('.wm-dots');if(pick.length>1){dwrap.innerHTML=pick.map(function(_,k){return '<button type="button" class="wm-dot'+(k?'':' on')+'" aria-label="Show message '+(k+1)+'"></button>'}).join('')}else{dwrap.remove()}
     var slides=m.querySelectorAll('.wm-slide'),dots=m.querySelectorAll('.wm-dot'),i=0,timer=null,last=null;
     var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function go(n){slides[i].classList.remove('on');dots[i].classList.remove('on');i=(n+slides.length)%slides.length;slides[i].classList.add('on');dots[i].classList.add('on')}
-    function start(){if(reduce)return;stop();timer=setInterval(function(){go(i+1)},5000)}
+    function go(n){if(slides.length<2)return;slides[i].classList.remove('on');dots[i].classList.remove('on');i=(n+slides.length)%slides.length;slides[i].classList.add('on');dots[i].classList.add('on')}
+    function start(){if(reduce||slides.length<2)return;stop();timer=setInterval(function(){go(i+1)},5000)}
     function stop(){if(timer)clearInterval(timer);timer=null}
     function open(){last=document.activeElement;m.hidden=false;requestAnimationFrame(function(){m.classList.add('show')});document.body.style.overflow='hidden';m.querySelector('.wm-close').focus();start();mark()}
     function close(){stop();m.classList.remove('show');document.body.style.overflow='';setTimeout(function(){m.hidden=true},250);if(last&&last.focus)last.focus()}
