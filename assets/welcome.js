@@ -10,7 +10,7 @@
     var dm=(location.search+location.hash).match(/day=(sun|mon|tue|wed|thu|fri|sat)/);var today=dm?dm[1]:DAYS[new Date().getDay()];
     var all=[].slice.call(m.querySelectorAll('.wm-slide'));
     var pick=all.filter(function(s){return (' '+s.dataset.days+' ').indexOf(' '+today+' ')>-1});
-    if(!pick.length)pick=all.filter(function(s){return /\ball\b|mon|sat/.test(s.dataset.days)});
+    if(!pick.length)pick=all.filter(function(s){return /\ball\b|sat/.test(s.dataset.days)});
     all.forEach(function(s){if(pick.indexOf(s)<0)s.remove()});
     var ratio=0;pick.forEach(function(s,k){s.src=s.dataset.src;if(k===0)s.classList.add('on');ratio=Math.max(ratio,(+s.getAttribute('height'))/(+s.getAttribute('width')))});
     var box=m.querySelector('.wm-slides');if(ratio)box.style.aspectRatio=(1/ratio).toFixed(4);
