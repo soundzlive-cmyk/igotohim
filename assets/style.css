@@ -197,3 +197,4 @@
 .wm-slides{aspect-ratio:3/4;max-height:64vh;background:#120e0d}
 .wm-slide{object-fit:contain}
 @media(max-width:620px){.wm-slides{height:auto;max-height:60vh;aspect-ratio:3/4}.wm-slide{object-fit:contain}}
+.wm-slides{width:100%}
