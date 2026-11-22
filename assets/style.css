@@ -209,3 +209,4 @@
   .navlinks{grid-column:1/-1}
 }
 @media(max-width:340px){.nav-donate span{display:none}.nav-donate{padding:0;width:40px;justify-content:center}}
+.kf-photos{position:relative;padding-bottom:70px}.kf-photos .kf-main .polaroid img{aspect-ratio:4/3;object-fit:cover}.kf-photos .kf-small{position:absolute;width:52%;right:-14px;bottom:-6px;z-index:2}.kf-photos .kf-small .polaroid{padding:8px 8px 38px}.kf-photos .kf-small .polaroid img{aspect-ratio:4/3;object-fit:cover;object-position:center 40%}.kf-photos .kf-small figcaption{font-size:21px;bottom:6px}.kf-photos .kf-main{width:88%}@media(max-width:620px){.kf-photos{padding-bottom:50px}.kf-photos .kf-small{width:56%;right:-4px}.kf-photos .kf-small .polaroid{padding:6px 6px 30px}.kf-photos .kf-small figcaption{font-size:17px;bottom:4px}}.kf-photos .kf-main figcaption{text-align:left;padding-left:14px}
